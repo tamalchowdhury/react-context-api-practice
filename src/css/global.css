@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px 1fr auto;
+  gap: 15px;
+  grid-template-areas: "header header header" "main main sidebar" "footer footer footer";
+  background: #cbd5e1;
+  height: 100vh;
+  padding: 10px;
+}
+
+.shell {
+  background: #efefef;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.footer {
+  grid-area: footer;
+}
